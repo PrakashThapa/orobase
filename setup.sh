@@ -15,6 +15,7 @@ apt-get install -qqy --reinstall nginx || exit 1
 
 # Install required composer-plugins
 runuser -s /bin/sh -c 'composer global require fxp/composer-asset-plugin:1.2.2' www-data || exit 1
+runuser -s /bin/sh -c 'composer global require hirak/prestissimo' www-data || exit 1
 
 # Install node.js
 apt-get install -qqy nodejs || exit 1
