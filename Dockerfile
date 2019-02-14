@@ -14,6 +14,7 @@ RUN dpkg-divert --local --rename --add /sbin/initctl && \
 		python-software-properties \
 		language-pack-en-base && \
 	LC_ALL=en_US.UTF-8 add-apt-repository ppa:ondrej/php && \
+    apt-get install -y python-pip  && pip install supervisor-stdout && \
 	apt-get update && apt-get upgrade -y && \
 	apt-get install -y python-setuptools \ 
         apt-transport-https \ 
