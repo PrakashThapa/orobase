@@ -1,4 +1,4 @@
-FROM ubuntu:xenial
+FROM ubuntu:18.04
 
 COPY ["setup.sh", "configure.sh", "/opt/bin/"]
 COPY ["sources.list", "/etc/apt/sources.list"]
