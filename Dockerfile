@@ -16,16 +16,29 @@ RUN dpkg-divert --local --rename --add /sbin/initctl && \
 	LC_ALL=en_US.UTF-8 add-apt-repository ppa:ondrej/php && \
 	apt-get update && apt-get upgrade -y && \
 	apt-get install -y python-setuptools \ 
+        apt-transport-https \ 
+        ca-certificates \
+        vim \
+        make  \
+        wget  \
+        curl  \
+        procps \
+        mcrypt  \
+        mysql-client  \
+        zip  \
+        unzip \
+		redis-tools  \
+        netcat-openbsd \
 		curl \
 		git \
 		nano \
 		sudo \
-		unzip \
 		openssh-server \
 		openssl \
 		supervisor \
 		nginx \
 		memcached \
+		netcat \
 		ssmtp \
 		cron && \
 	# Install PHP
