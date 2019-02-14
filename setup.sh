@@ -11,6 +11,8 @@ echo '#!/usr/bin/env bash' >> /usr/local/bin/composer
 echo 'COMPOSER_HOME=/opt/composer/$(whoami) /usr/local/bin/composer.phar $@' >> /usr/local/bin/composer
 chmod 0755 /usr/local/bin/composer
 
+apt-get install -qqy --reinstall nginx || exit 1
+
 # Install required composer-plugins
 runuser -s /bin/sh -c 'composer global require fxp/composer-asset-plugin:1.2.2' www-data || exit 1
 
