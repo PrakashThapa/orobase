@@ -9,7 +9,7 @@ export LC_ALL='en_US.UTF-8'
 export LANG='en_US.UTF-8'
 export LANGUAGE='en_US.UTF-8'
 
-add-apt-repository ppa:ondrej/php 
+LC_ALL=C.UTF-8 add-apt-repository -y ppa:ondrej/php 
 apt-get -qy update
 apt-get -qqy upgrade
 
@@ -25,6 +25,29 @@ apt-get install -qqy --no-install-recommends php-fpm php-cli php-common php-dev 
 php-mysql php-curl php-gd php-mcrypt php-xmlrpc php-ldap \
 php-xsl php-intl php-soap php-mbstring php-zip php-bz2 php-redis php-tidy || exit 1
 
+apt-get install -y php7.1-fpm \
+		php7.1-mysql \
+	    php7.1-curl \
+	    php7.1-gd \
+	    php7.1-intl \
+	    php7.1-mcrypt \
+	    php-memcache \
+	    php7.1-sqlite \
+	    php7.1-tidy \
+	    php7.1-xmlrpc \
+	    php7.1-pgsql \
+	    php7.1-ldap \
+	    freetds-common \
+	    php7.1-pgsql \
+	    php7.1-sqlite3 \
+	    php7.1-json \
+	    php7.1-xml \
+	    php7.1-mbstring \
+	    php7.1-soap \
+	    php7.1-zip \
+	    php7.1-cli \
+	    php7.1-sybase \
+	    php7.1-odbc || exit 1
 # Install nginx
 apt-get install -qqy --reinstall nginx || exit 1
 
