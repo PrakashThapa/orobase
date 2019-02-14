@@ -29,7 +29,6 @@ RUN dpkg-divert --local --rename --add /sbin/initctl && \
         unzip \
 		redis-tools  \
         netcat-openbsd \
-		curl \
 		git \
 		nano \
 		sudo \
