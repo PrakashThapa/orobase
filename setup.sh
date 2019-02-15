@@ -50,6 +50,7 @@ chmod 0755 /usr/local/bin/composer
 runuser -s /bin/sh -c 'composer global require fxp/composer-asset-plugin:1.4.4' www-data || exit 1
 
 # Install node.js
+apt-get purge nodejs*
 curl -sL https://deb.nodesource.com/setup_8.x |  bash -
 apt-get install nodejs -y && apt-get install npm -y  || exit 1
 
