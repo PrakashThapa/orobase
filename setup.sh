@@ -25,9 +25,9 @@ apt-get install -qqy apt-transport-https ca-certificates vim make git-core wget 
 mcrypt mysql-client zip unzip redis-tools netcat-openbsd
 apt-get -qqy --allow-insecure-repositories update
 # Install php
-apt-get install -y --allow-unauthenticated php7.1-fpm php7.1-cli php7.1-common php7.1-dev \
-php7.1-mysql php7.1-curl php7.1-gd php7.1-mcrypt php7.1-xmlrpc php7.1-ldap \
-php7.1-xsl php7.1-intl php7.1-soap php7.1-mbstring php7.1-zip php7.1-bz2 php7.1-redis || exit 1 
+apt-get install -y --allow-unauthenticated php7.2-fpm php7.2-cli php7.2-common php7.2-dev \
+php7.2-mysql php7.2-curl php7.2-gd php-mcrypt php7.2-xmlrpc php7.2-ldap \
+php7.2-xsl php7.2-intl php7.2-soap php7.2-mbstring php7.2-zip php7.2-bz2 php7.2-redis || exit 1 
 
 # Install nginx
 apt-get install -qqy --reinstall nginx || exit 1
