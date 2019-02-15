@@ -17,6 +17,8 @@ dpkg-reconfigure locales
 apt-get install -qqy software-properties-common python-software-properties python-setuptools
 add-apt-repository -y ppa:ondrej/php
 
+apt-get install -y python-pip
+pip install supervisor-stdout
 
 # Install base packages
 apt-get install -qqy apt-transport-https ca-certificates vim make git-core wget curl procps \
