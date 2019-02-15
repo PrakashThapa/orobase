@@ -54,8 +54,8 @@ curl -sL https://deb.nodesource.com/setup_8.x |  bash -
 apt-get install nodejs -y && apt-get install npm -y  || exit 1
 
 # Install supervisor
-easy_install supervisor || exit 1
-easy_install supervisor-stdout || exit 1
+#easy_install supervisor || exit 1
+#easy_install supervisor-stdout || exit 1
 
 apt-get -qq clean
 rm -rf /var/lib/apt/lists/*
