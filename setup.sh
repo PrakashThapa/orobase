@@ -54,8 +54,7 @@ apt-get purge nodejs*
 apt-get clean && apt-get autoremove && apt-get install -f
 curl -sL https://deb.nodesource.com/setup_8.x |  bash -
 apt-get -y update
-apt-get install nodejs -y && apt-get install npm -y  || exit 1
-
+apt-get install nodejs -y && apt-get install npm -y  
 # Install supervisor
 #easy_install supervisor || exit 1
 #easy_install supervisor-stdout || exit 1
