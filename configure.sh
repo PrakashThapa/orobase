@@ -26,10 +26,10 @@ sed -i -e "s/max_execution_time\s=\s.*/max_execution_time = 300/g" /etc/php/7.2/
 sed -i -e "s/;daemonize\s*=\s*yes/daemonize = no/g" /etc/php/7.2/fpm/php-fpm.conf
 sed -i -e "s/;catch_workers_output\s*=\s*yes/catch_workers_output = yes/g" /etc/php/7.2/fpm/pool.d/www.conf
 sed -i -e "s/;catch_workers_output\s*=\s*yes/catch_workers_output = yes/g" /etc/php/7.2/fpm/pool.d/www.conf
-sed -i -e "s/listen\s=\s\/run\/php\/php7.1-fpm.sock/listen = \/var\/run\/php-fpm.sock/g" /etc/php/7.2/fpm/pool.d/www.conf
+sed -i -e "s/listen\s=\s\/run\/php\/php7.2-fpm.sock/listen = \/var\/run\/php-fpm.sock/g" /etc/php/7.2/fpm/pool.d/www.conf
 
 # Fix old style for comments
-find /etc/php/7.1/cli/conf.d/ -name "*.ini" -exec sed -i -re 's/^(\s*)#(.*)/\1;\2/g' {} \;
+find /etc/php/7.2/cli/conf.d/ -name "*.ini" -exec sed -i -re 's/^(\s*)#(.*)/\1;\2/g' {} \;
 
 # Configure nginx
 sed -i -e"s/keepalive_timeout\s*65/keepalive_timeout 2/" /etc/nginx/nginx.conf || exit 1
@@ -44,7 +44,7 @@ mkdir -p /srv/app-data
 mkdir -p /var/www
 
 mkdir -p /var/run/php
-ln -s /usr/sbin/php-fpm7.1 /usr/sbin/php-fpm
+ln -s /usr/sbin/php-fpm7.2 /usr/sbin/php-fpm
 
 chown ${WWW_USER}:${WWW_GROUP} /srv/app-data
 chown ${WWW_USER}:${WWW_GROUP} /var/www
