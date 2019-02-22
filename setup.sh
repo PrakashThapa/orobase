@@ -52,7 +52,7 @@ runuser -s /bin/sh -c 'composer global require fxp/composer-asset-plugin:1.4.4' 
 # Install node.js
 apt-get purge nodejs*
 apt-get clean && apt-get autoremove && apt-get install -f
-curl -sL https://deb.nodesource.com/setup_8.x |  bash -
+curl -sL https://deb.nodesource.com/setup_10.x | bash -
 apt-get -y update
 apt-get install nodejs -y && apt-get install npm -y  
 # Install supervisor
